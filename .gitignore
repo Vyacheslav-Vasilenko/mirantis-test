@@ -1,2 +1,6 @@
+# WebStorm / PhpStorm
+.idea/*
+.idea
+
 .sass-cache/
 *.css.map

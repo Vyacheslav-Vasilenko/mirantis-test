@@ -1,0 +1,74 @@
+/*
+Theme Name: Bull Theme
+Theme URI: https://wordpress.org/themes/twentyfifteen/
+Author: Dmitry Fedoryaka
+Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, straightforward typography is readable on a wide variety of screen sizes, and suitable for multiple languages. We designed it using a mobile-first approach, meaning your content takes center-stage, regardless of whether your visitors arrive by smartphone, tablet, laptop, or desktop computer.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+Text Domain: Bull Theme
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+// devices viewport width starts at:
+$breakpoints: (
+  xs-phone: 320px,
+  phone: 480px,
+  tablet: 768px,
+  desktop: 1025px,
+  widescreen: 1300px
+);
+
+// keywords
+$media-expressions: (
+  'screen': 'screen',
+  'print': 'print',
+  'handheld': 'handheld',
+  'landscape': '(orientation: landscape)',
+  'portrait': '(orientation: portrait)',
+  'retina2x': '(-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi)',
+  'retina3x': '(-webkit-min-device-pixel-ratio: 2.5), (min-resolution: 240dpi)'
+);
+
+// ligatured operators ≥ ≤
+
+@import 'vendors/include-media';
+@import 'vendors/fonts';
+@import 'vendors/star-rating';
+
+@import 'base/variables';
+@import 'base/functions';
+@import 'base/mixins';
+@import 'base/helpers';
+@import 'base/reset';
+@import 'base/cms-reset';
+@import 'base/forms';
+@import 'base/wp-reset';
+@import 'base/typography';
+
+@import 'components/nofound-page';
+@import 'components/buttons';
+@import 'components/single-post';
+@import 'components/single-page';
+@import 'components/tabs';
+@import 'components/author-page';
+@import 'components/navigation';
+@import 'components/newsletter';
+@import 'components/review';
+@import 'components/search';
+@import 'components/brokers-list';
+@import 'components/about';
+@import 'components/cookie-bar';
+
+@import 'layout/header';
+@import 'layout/common';
+@import 'layout/breadcrumbs';
+@import 'layout/footer';
+@import 'layout/sidebar';
+@import 'layout/default-template';
+
+@import 'components/broker-page';

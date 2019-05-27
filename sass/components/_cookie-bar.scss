@@ -1,0 +1,27 @@
+#cookie-bar{
+
+    &.fixed{
+        background: $white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 1000;
+        border-top: 1px solid $gray;
+    }
+    p{
+        margin: 0 auto;
+        text-align: center;
+        font-size: 12px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        justify-content: center;
+
+        .btn{
+            margin: 5px 15px;
+        }
+    }
+}
