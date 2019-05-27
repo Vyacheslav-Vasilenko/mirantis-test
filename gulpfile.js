@@ -1,112 +1,31 @@
+'use strict';
 var gulp = require('gulp'),
-    browsersync = require('browser-sync'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglifyjs'),
-    rename = require('gulp-rename'),
-    del = require('del'),
-    sass = require('gulp-sass'),
-    plumber = require("gulp-plumber"),
-    notify = require("gulp-notify"),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    cleanCSS = require('gulp-clean-css');
+    uglify = require('gulp-uglify'),
+    sass = require('gulp-sass');
 
-/////////////////////////////////
-/////////// scss
-/////////////////////////////////
 
-gulp.task('styles', function () {
-    return gulp.src('dev/sass/style.scss')
-        .pipe(plumber())
+
+
+gulp.task('sass', async function() {
+    gulp.src('./app/sass/**/*.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass())
-        .on("error", notify.onError(function (error) {
-            return "Something happened: " + error.message;
-        }))
+        .pipe(sass({outputStyle: 'compressed'}))
         .pipe(autoprefixer(['last 2 version']))
-        // .pipe(cleanCSS())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(''))
+        .pipe(gulp.dest('./dist/css'))
 });
 
-
-/////////////////////////////////
-/////////// scripts
-/////////////////////////////////
-
-gulp.task('scripts', function () {
-    return gulp.src([
-        'node_modules/slick-carousel/slick/slick.min.js',
-        'js/vendor/stickyscrollbox.js',
-        'dev/js/main.js'
-    ])
-        .pipe(concat('main.min.js'))
-        // .pipe(uglify())
-        .pipe(gulp.dest('js'))
-        .pipe(browsersync.reload({
-            stream: true
-        }));
+gulp.task('minify', async function () {
+    gulp.src('app/js/*.js')
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'))
 });
-
-gulp.task('jquery', function () {
-    return gulp.src([
-        'node_modules/jquery/dist/jquery.min.js'
-    ])
-        .pipe(gulp.dest('js'))
-});
-
-
-/////////////////////////////////
-/////////// images
-/////////////////////////////////
-
-gulp.task('images', function() {
-    return gulp.src(['dev/images/**/*.*'])
-        .pipe(gulp.dest('images'))
-        .pipe(browsersync.reload({
-            stream: true
-        }));
-});
-
-/////////////////////////////////
-/////////// markup
-/////////////////////////////////
-
-gulp.task('markup', function() {
-    return gulp.src('*.html')
-        .pipe(browsersync.reload({
-            stream: true
-        }));
-});
-
-
-/////////////////////////////////
-/////////// watch
-/////////////////////////////////
 
 gulp.task('watch', [ 'build' ], function() {
-    gulp.watch('dev/sass/**/*.scss', ['styles']);
-    gulp.watch('*.html', ['markup']);
-    gulp.watch('dev/assets/images/**/*.*', ['images']);
-    gulp.watch(['dev/js/**/*.js'], ['scripts']);
+    gulp.watch('app/scss/**/*.scss', ['sass']);
+    gulp.watch(('js/*.js'), ['minify']);
 });
 
-/////////////////////////////////
-/////////// clean
-/////////////////////////////////
+gulp.task('build', ['sass',  'minify']);
 
-gulp.task('clean', function () {
-    return del.sync(['js', 'css']);
-});
-
-/////////////////////////////////
-/////////// build
-/////////////////////////////////
-
-gulp.task('build', ['styles', 'images', 'jquery', 'scripts']);
-
-
-/////////////////////////////////
-/////////// default
-/////////////////////////////////
 gulp.task('default', ['watch']);
