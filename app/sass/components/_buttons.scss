@@ -1,6 +1,28 @@
 .btn {
+    text-transform: uppercase;
+    font-family: $mon-bold;
+    background: $pink;
+    font-size: $fs - 2;
+    border: 2px solid $pink;
+    color: $white;
+    padding: 5px 15px;
+    text-align: center;
+    position: relative;
+    transition: .3s;
 
     &:hover {
+        color: $pink;
+        background: transparent;
+    }
 
+    &--ghost{
+        @extend .btn;
+        background: transparent;
+        color: $pink;
+
+        &:hover {
+            color: $white;
+            background: $pink;
+        }
     }
 }

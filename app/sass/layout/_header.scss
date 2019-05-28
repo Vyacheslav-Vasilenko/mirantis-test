@@ -1,0 +1,44 @@
+.header{
+    background: $white;
+    padding: 15px 0;
+    border-bottom: 2px solid $pink;
+
+    .container{
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+    }
+}
+.logo{
+    display: flex;
+    align-items: center;
+    img{
+        max-width: 185px;
+    }
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: flex-end;
+
+    ul{
+        display: flex;
+        align-items: center;
+        padding-right: 20px;
+        a{
+            display: inline-block;
+            vertical-align: top;
+            color: #26081b;
+            text-transform: uppercase;
+            font-size: $fs - 2;
+            padding: 5px 20px;
+            transition: .3s;
+
+            &:hover{
+                color: $pink;
+            }
+        }
+    }
+
+}

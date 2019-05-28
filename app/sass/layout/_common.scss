@@ -4,5 +4,30 @@
     padding: 0;
 }
 body {
+    font-family: 'montserratregular', Arial, Tahoma, Verdana, sans-serif;
+    font-size: $fs;
+    line-height: 1.7;
+    color: $base;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $pink;
+    transition: 0.2s;
 
+}
+.wrapper{
+    overflow: hidden;
+    position: relative;
+}
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
