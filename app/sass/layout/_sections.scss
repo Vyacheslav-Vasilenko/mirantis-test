@@ -1,0 +1,60 @@
+.section{
+    padding: 100px 0;
+    background: $white;
+    @include res(768){
+        padding: 55px 0;
+    }
+
+    &.lightbrick {
+        background: #e6efed;
+    }
+}
+.separated{
+
+    .cept-logo{
+        max-width: 123px;
+        margin: 0 0 10px;
+        @include res(768){
+            max-width: 85px;
+        }
+    }
+    p{
+        text-align: center;
+        max-width: 920px;
+        margin: 0 auto 100px;
+        @include res(768){
+            margin-bottom: 60px;
+        }
+    }
+    .col50{
+        display: flex;
+        align-items: flex-start;
+        @include res(768){
+            margin: 0!important;
+            text-align: center;
+        }
+
+        p{
+            text-align: left;
+            margin-bottom: 60px;
+            @include res(768){
+                margin-bottom: 60px;
+                text-align: center;
+            }
+        }
+        img{
+            max-width: 65px;
+            height: auto;
+            margin-right: 30px;
+            @include res(768){
+                display: none;
+            }
+        }
+    }
+}
+.lifecycle{
+    .title40--center{
+        max-width: 850px;
+        margin: 0 auto 60px;
+    }
+}

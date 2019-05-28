@@ -1,0 +1,111 @@
+.footer{
+    background: linear-gradient(180deg,#16061d,#332546 75%,#893f6b);
+    padding: 55px 0;
+
+    &__top{
+        display: flex;
+        align-items: center;
+        margin: 0 0 30px;
+        @include res(480){
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__logo{
+        display: block;
+        line-height: 0;
+        margin-right: 30px;
+        @include res(480){
+            margin: 0 0 30px;
+        }
+        img{
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+
+        }
+    }
+    &__middle{
+        display: flex;
+        margin: 0 -15px;
+        @include res(768){
+            flex-wrap: wrap;
+        }
+    }
+    &__col{
+        width: 16.66667%;
+        flex-grow: 1;
+        font-size: $fs - 4;
+        padding: 0 15px;
+        margin: 0 0 30px;
+        @include res(768){
+            width: 33.3%;
+        }
+        @include res(480){
+            width: 50%;
+        }
+
+        a{
+            color: $white;
+            display: inline-block;
+            padding: 4px 0;
+            transition: .2s;
+
+            &:hover{
+                color: $pink;
+            }
+        }
+    }
+    &__title{
+        text-transform: uppercase;
+        color: $bright-teal;
+        margin: 0 0 10px;
+        font-family: $mon-bold;
+    }
+    .address{
+        color: $bright-teal;
+        font-size: $fs - 6;
+        margin: 0 0 10px;
+
+        a{
+            color: inherit;
+            white-space: nowrap;
+        }
+
+        strong{
+            font-family: $mon-bold;
+        }
+    }
+    .copyright{
+        font-size: $fs - 9;
+        font-family: $mon-bold;
+        color: #687b7b;
+    }
+}
+.socials{
+    display: flex;
+    @include res(480){
+        width: 100%;
+        justify-content: center;
+    }
+    i {
+        line-height: 0;
+    }
+    a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #452e4c;
+        height: 40px;
+        width: 40px;
+        color: #867989;
+        margin: 0 8px;
+        font-size: $fs + 6;
+        transition: .2s;
+
+        &:hover{
+            color: $pink;
+        }
+    }
+}

@@ -1,12 +1,16 @@
 @import "normalize";
 
 @import 'vendors/fonts';
+@import 'vendors/aos';
 
 @import 'base/variables';
 @import 'base/mixins';
 
-@import 'layout/header';
 @import 'layout/common';
+@import 'layout/header';
 @import 'layout/footer';
+@import 'layout/main-banner';
+@import 'layout/sections';
 
 @import 'components/buttons';
+@import 'components/titles';

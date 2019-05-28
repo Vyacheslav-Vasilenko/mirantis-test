@@ -13,7 +13,7 @@
 <header class="header">
     <div class="container">
         <a href="#" class="logo">
-            <img src="dist/images/mirantis-logo-2color-horizontal-rgb@2x.png" alt="">
+            <img src="dist/images/mirantis-logo-2color-horizontal-rgb@2x.png" alt="logo mirantis">
         </a>
         <nav class="navigation">
             <ul>
@@ -25,8 +25,226 @@
             </ul>
             <a href="#" class="btn--ghost">Contact sales</a>
         </nav>
+        <span class="menu-button"><i></i></span>
     </div>
 </header>
+<main class="main-content">
+    <div class="main-banner">
+        <div class="container">
+            <h1>Ceph in Mirantis Cloud Platform</h1>
+            <p>
+                Best-in-class options to deliver software-deﬁned storage (SDS), including Ceph, into cloud infrastructures
+            </p>
+            <div class="main-banner__buttons">
+                <a href="#" class="btn">sign up for live demo</a>
+                <a href="#" class="btn--ghost white">view deployment guide</a>
+            </div>
+        </div>
+    </div>
+    <section class="section lightbrick">
+        <div class="container">
+            <div class="cols">
+                <div class="col50">
+                    <h3 class="title40">Pure-Play Open Cloud Storage</h3>
+                    <p>
+                        Cloud native workloads are largely stateless, but ultimately all of that activity is stored somewhere. As your developers deploy workloads to your on-prem cloud, they need the ability to provision both block and object storage for themselves. MCP leverages Ceph, the most popular and widely adopted block storage choice for private clouds. Applications, virtual machines, containers and image repositories can utilize Ceph for different types of storage, including ephemeral block storage, persistent block and object storage. For cloud native applications, where existing SAN and NAS storage solutions do not scale, Ceph is a perfect choice.
+                    </p>
+                </div>
+                <div class="col50">
+                    <div data-aos="fade-left">
+                        <img src="dist/images/cinder-diagram@2x.png" alt="diagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section separated">
+        <div class="container">
+            <div class="title40--center">
+                <img class="cept-logo" src="dist/images/ceph-logo@2x.png" alt="why cept?">
+                <h3>Why Ceph?</h3>
+            </div>
+            <p>
+                While your developers need a cloud storage solution, IT/OPS needs a uniﬁed pool of storage that can be scaled up by simply adding storage server nodes. Ceph is a “uniﬁed, distributed storage system designed for excellent performance, reliability and scalability.” (source: ceph.com). It is an open source software project to build scale-out storage that meets all of the above requirements for both block and object storage for OpenStack. Ceph has built-in self-healing and can withstand underlying hardware failures; additional capacity can be added whenever required.
+            </p>
+            <div class="cols">
+                <div class="col50" data-aos="fade-down-right">
+                    <img src="dist/images/ic-sm-scaling.svg" alt="Scale-Out Storage">
+                    <div>
+                        <h4 class="title30">Scale-Out Storage</h4>
+                        <p>
+                            Scale-up storage no longer works, clouds require storage to scale-out by simply adding nodes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col50" data-aos="fade-down-left">
+                    <img src="dist/images/ic-sm-resilience.svg" alt="Self-Healing & Resilience in Software">
+                    <div>
+                        <h4 class="title30">Self-Healing & Resilience in Software</h4>
+                        <p>
+                            Resilience in a cloud gets moved to the software layer as opposed to a hardware layer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="cols">
+                <div class="col50" data-aos="fade-up-right">
+                    <img src="dist/images/ic-sm-automation.svg" alt="Automated">
+                    <div>
+                        <h4 class="title30">Automated</h4>
+                        <p>
+                            Storage in a cloud environment needs to be automated both for IT/OPS and for developers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col50" data-aos="fade-up-left">
+                    <img src="dist/images/ic-sm-opensource.svg" alt="Open Source">
+                    <div>
+                        <h4 class="title30">Open Source</h4>
+                        <p>
+                            Open source is a must in cloud environments. Open source ensures velocity, access to continuous innovation and no lock-in.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section lightbrick">
+        <div class="container">
+            <div class="cols">
+                <div class="col50">
+                    <h3 class="title40">Ceph in MCP</h3>
+                    <p>
+                        We take open source Ceph and provide four key value-adds. First, Mirantis hardens Ceph by providing comprehensive in-house testing. Second, we include our deployment and lifecycle management toolchain DriveTrain. Third, we integrate Ceph with our monitoring solution
+                        <a href="#">StackLight</a>. Finally, we provide a  <a href="#">support</a> subscription that includes a choice of service level agreements (SLAs), updates and upgrades, including a fully managed operations option called OpsCare.
+                        <br>
+                        <br>
+                        The Mirantis distribution of Ceph supports petabyte-scale, multiple interfaces (S3, Swift, block), and features such as access control, storage policies, snapshots, thin provisioning, caching, ﬂash journals, storage pooling.</p>
+                </div>
+                <div class="col50">
+                    <div data-aos="fade-left">
+                        <img src="dist/images/ceph-in-mcp-diagram@2x.png" alt="diagram">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section separated lifecycle">
+        <div class="container">
+            <h3 class="title40--center">Ceph Lifecycle Management Using Mirantis DriveTrain and StackLight OSS </h3>
+            <div class="cols">
+                <div class="col50" data-aos="fade-down-right">
+                    <img src="dist/images/ic-sm-drivetrain-vivid2.svg" alt="DriveTrain">
+                    <div>
+                        <h4 class="title30">DriveTrain</h4>
+                        <p>
+                            Mirantis DriveTrain leverages Salt and Reclass automation to deploy and manage ongoing lifecycle operations of the entire cloud, including Ceph storage clusters. DriveTrain’s model-driven architecture includes formulas to implement and scale fully integrated Ceph clusters and the desired interfaces within the MCP open cloud. Take advantage of the CI/CD beneﬁts brought by DriveTrain to enable the resilience and stability of Ceph to your cloud workloads allowing you to deliver and grow best-in-class software-defined storage services to customers.
+                        </p>
+                    </div>
+                </div>
+                <div class="col50" data-aos="fade-down-left">
+                    <img src="dist/images/ic-sm-stacklight-vivid2.svg" alt="StackLight">
+                    <div>
+                        <h4 class="title30">StackLight</h4>
+                        <p>
+                            Keep tabs on the performance and utilization of the Ceph storage across your workloads from within Mirantis StackLight OSS. The DevOps Portal within StackLight provides real-time data metrics regarding how your users are employing the Ceph clusters. As an early detection and comprehensive alerting operations support system, StackLight enables IT operators to closely monitor and deliver high availability of Ceph services to customers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <a class="footer__logo" href="#">
+                <img src="dist/images/logo-white.svg" alt="logo mirantis">
+            </a>
+            <ul class="socials">
+                <li><a href="#"><i class="icon-linkedin"></i></a></li>
+                <li><a href="#"><i class="icon-facebook"></i></a></li>
+                <li><a href="#"><i class="icon-youtube"></i></a></li>
+                <li><a href="#"><i class="icon-twitter"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer__middle">
+            <div class="footer__col">
+                <div class="footer__title">Cloud platform</div>
+                <ul>
+                    <li><a href="#">DriveTrain</a></li>
+                    <li><a href="#">StackLight </a></li>
+                    <li><a href="#">Kubernetes</a></li>
+                    <li><a href="#">OpenStack</a></li>
+                    <li><a href="#">Ceph</a></li>
+                    <li><a href="#">Tungsten</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Use cases</div>
+                <ul>
+                    <li><a href="#">Edge</a></li>
+                    <li><a href="#">Computing</a></li>
+                    <li><a href="#">NFV</a></li>
+                    <li><a href="#">Infractructure</a></li>
+                    <li><a href="#">Agile IT</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Delivery approach</div>
+                <ul>
+                    <li><a href="#">Build</a></li>
+                    <li><a href="#">Operate</a></li>
+                    <li><a href="#">Transfer</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Training</div>
+                <ul>
+                    <li><a href="#">Overview</a></li>
+                    <li><a href="#">Instructor-led</a></li>
+                    <li><a href="#">Ondemand</a></li>
+                    <li><a href="#">Certification</a></li>
+                    <li><a href="#">Private</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">Resources</div>
+                <ul>
+                    <li><a href="#">Customers</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Webinars</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Brochures</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__title">About</div>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">Locations</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Leadership</a></li>
+                    <li><a href="#">Board of</a></li>
+                    <li><a href="#">Directors</a></li>
+                    <li><a href="#">Press Center</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="address">
+                <strong>Mirantis Inc.</strong> 900 E Hamilton Avenue, Suite 650, Campbell, CA 95008 <a href="tel:+16509639828">+1-650-963-9828</a>
+            </div>
+            <div class="copyright">
+                © 2005 - 2019 Mirantis, Inc. All rights reserved. "Mirantis" and "FUEL" are registered trademarks of Mirantis, Inc. All other trademarks are the property of their respective owners.
+            </div>
+        </div>
+    </div>
+</footer>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -1,0 +1,23 @@
+.title40{
+    font-size: $fs*2 + 4;
+    font-family: $mon-bold;
+    line-height: 1.25;
+    color: $titles;
+    margin: 0 0 20px;
+    @include res(480){
+        font-size: $fs*2 - 4;
+    }
+
+    &--center{
+        @extend .title40;
+        text-align: center;
+    }
+}
+.title30{
+    @extend .title40;
+    font-size: $fs*2 - 6;
+
+    @include res(480){
+        font-size: $fs*1.5 - 2;
+    }
+}

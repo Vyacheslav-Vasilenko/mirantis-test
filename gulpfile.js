@@ -24,7 +24,7 @@ gulp.task('sass', async function() {
 });
 
 gulp.task('minify', async function () {
-    gulp.src('app/js/*.js')
+    gulp.src('app/js/**/*.js')
         .pipe(uglify())
         .pipe(concat('main.js', {newLine: ';'}))
         .pipe(gulp.dest('dist/js'))
@@ -45,4 +45,4 @@ gulp.task('watch', [ 'build' ], function() {
 
 gulp.task('build', ['sass',  'minify', 'images']);
 
-gulp.task('default', ['watch']);
+gulp.task('default', ['build', 'watch', 'images']);
